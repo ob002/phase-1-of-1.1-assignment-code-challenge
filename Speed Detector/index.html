@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net Salary Calculator - Kenya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💰 Net Salary Calculator</h1>
+            <p>Calculate your take-home pay in Kenya</p>
+        </header>
+        
+        <main>
+            <form id="salaryForm">
+                <div class="input-group">
+                    <label for="basicSalary">Basic Salary (KES)</label>
+                    <input type="number" id="basicSalary" placeholder="Enter basic salary" min="0" step="0.01" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="benefits">Benefits (KES)</label>
+                    <input type="number" id="benefits" placeholder="Enter benefits" min="0" step="0.01" required>
+                </div>
+                
+                <button type="submit">Calculate Net Salary</button>
+            </form>
+            
+            <div class="results-container">
+                <h2>Salary Breakdown</h2>
+                <div class="results-grid">
+                    <div class="result-card">
+                        <h3>Gross Salary</h3>
+                        <p id="grossSalary">KES 0.00</p>
+                    </div>
+                    
+                    <div class="result-card">
+                        <h3>PAYE Tax</h3>
+                        <p id="payeTax">KES 0.00</p>
+                    </div>
+                    
+                    <div class="result-card">
+                        <h3>NHIF Deduction</h3>
+                        <p id="nhifDeduction">KES 0.00</p>
+                    </div>
+                    
+                    <div class="result-card">
+                        <h3>NSSF Deduction</h3>
+                        <p id="nssfDeduction">KES 0.00</p>
+                    </div>
+                    
+                    <div class="result-card net-salary">
+                        <h3>Net Salary</h3>
+                        <p id="netSalary">KES 0.00</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tax-tables">
+                <div class="table-container">
+                    <h3>PAYE Tax Rates</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Income (KES)</th>
+                                <th>Rate</th>
+                                <th>Tax (KES)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Up to 24,000</td>
+                                <td>10%</td>
+                                <td>2,400</td>
+                            </tr>
+                            <tr>
+                                <td>24,001 - 32,333</td>
+                                <td>25%</td>
+                                <td>2,083.25</td>
+                            </tr>
+                            <tr>
+                                <td>32,334 - 500,000</td>
+                                <td>30%</td>
+                                <td>142,500</td>
+                            </tr>
+                            <tr>
+                                <td>500,001 - 800,000</td>
+                                <td>32.5%</td>
+                                <td>97,500</td>
+                            </tr>
+                            <tr>
+                                <td>Above 800,000</td>
+                                <td>35%</td>
+                                <td>Variable</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="table-container">
+                    <h3>NHIF Contribution Rates</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Income (KES)</th>
+                                <th>Deduction (KES)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Up to 5,999</td>
+                                <td>150</td>
+                            </tr>
+                            <tr>
+                                <td>6,000 - 7,999</td>
+                                <td>300</td>
+                            </tr>
+                            <tr>
+                                <td>8,000 - 11,999</td>
+                                <td>400</td>
+                            </tr>
+                            <tr>
+                                <td>12,000 - 14,999</td>
+                                <td>500</td>
+                            </tr>
+                            <tr>
+                                <td>15,000 - 19,999</td>
+                                <td>600</td>
+                            </tr>
+                            <tr>
+                                <td>20,000 - 24,999</td>
+                                <td>750</td>
+                            </tr>
+                            <tr>
+                                <td>25,000 - 29,999</td>
+                                <td>850</td>
+                            </tr>
+                            <tr>
+                                <td>30,000 - 34,999</td>
+                                <td>900</td>
+                            </tr>
+                            <tr>
+                                <td>35,000 - 39,999</td>
+                                <td>950</td>
+                            </tr>
+                            <tr>
+                                <td>40,000 - 44,999</td>
+                                <td>1,000</td>
+                            </tr>
+                            <tr>
+                                <td>45,000 - 49,999</td>
+                                <td>1,100</td>
+                            </tr>
+                            <tr>
+                                <td>50,000 - 59,999</td>
+                                <td>1,200</td>
+                            </tr>
+                            <tr>
+                                <td>60,000 - 69,999</td>
+                                <td>1,300</td>
+                            </tr>
+                            <tr>
+                                <td>70,000 - 79,999</td>
+                                <td>1,400</td>
+                            </tr>
+                            <tr>
+                                <td>80,000 - 89,999</td>
+                                <td>1,500</td>
+                            </tr>
+                            <tr>
+                                <td>90,000 - 99,999</td>
+                                <td>1,600</td>
+                            </tr>
+                            <tr>
+                                <td>100,000 and above</td>
+                                <td>1,700</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Based on Kenyan tax regulations as of 2023</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

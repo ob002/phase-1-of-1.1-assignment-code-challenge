@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Grade Generator</h1>
+        <div class="input-section">
+            <label for="marks">Enter Student Marks (0-100):</label>
+            <input type="number" id="marks" min="0" max="100" placeholder="Enter marks...">
+            <button id="generate-btn">Generate Grade</button>
+        </div>
+        <div id="result" class="result-section">
+            <div id="grade-display" class="grade-display"></div>
+            <p id="grade-message" class="grade-message"></p>
+        </div>
+        <div id="error-message" class="error-message"></div>
+        <div class="grade-info">
+            <h3>Grade Scale:</h3>
+            <ul>
+                <li>A: Marks > 79</li>
+                <li>B: Marks 60 to 79</li>
+                <li>C: Marks 49 to 59</li>
+                <li>D: Marks 40 to 49</li>
+                <li>E: Marks < 40</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
